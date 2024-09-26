@@ -1,19 +1,18 @@
-package com.example.task01;
+package com.example.task04;
 
 public class Point {
-    int x;
-    int y;
+    final int x;
+    final int y;
     Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
     Point() {
+        this(0, 0);
     }
 
-    void flip() {
-        int temp = x;
-        x = -y;
-        y = -temp;
+    Point flip() {
+        return new Point(-y, -x);
     }
 
     double distance(Point point) {
